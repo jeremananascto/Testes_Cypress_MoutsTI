@@ -1,16 +1,9 @@
-/**
- * Page Object referente à tela de Login (/login).
- * Encapsula seletores e ações da página, evitando que os
- * testes conheçam detalhes de implementação da UI.
- */
 class LoginPage {
   elements = {
     campoEmail: () => cy.get('[data-testid="email"]'),
     campoSenha: () => cy.get('[data-testid="senha"]'),
     botaoEntrar: () => cy.get('[data-testid="entrar"]'),
     linkCadastrar: () => cy.get('[data-testid="cadastrar"]'),
-    // Confirmado via inspeção real do DOM: <div class="alert alert-secondary
-    // alert-dismissible" role="alert"><span>texto</span></div>
     mensagemAlerta: () => cy.get('.alert[role="alert"]'),
   };
 

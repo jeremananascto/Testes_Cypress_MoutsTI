@@ -33,12 +33,11 @@ describe("API | /usuarios", () => {
       administrador: "false",
     };
 
-    // Primeiro cadastro (válido)
     cy.apiCriarUsuario(usuario).then((primeiraResposta) => {
       expect(primeiraResposta.status).to.eq(201);
       const idCriado = primeiraResposta.body._id;
 
-      // Segunda tentativa, mesmo e-mail
+
       cy.apiCriarUsuario(usuario).then((segundaResposta) => {
         expect(segundaResposta.status).to.eq(400);
         expect(segundaResposta.body.message).to.eq("Este email já está sendo usado");

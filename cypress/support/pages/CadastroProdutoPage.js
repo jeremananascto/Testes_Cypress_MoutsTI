@@ -1,8 +1,3 @@
-/**
- * Page Object referente à tela administrativa de Cadastro de
- * Produto (/admin/cadastrarprodutos), disponível apenas para
- * usuários autenticados com perfil administrador.
- */
 class CadastroProdutoPage {
   elements = {
     campoNome: () => cy.get('[data-testid="nome"]'),
@@ -10,8 +5,6 @@ class CadastroProdutoPage {
     campoDescricao: () => cy.get('[data-testid="descricao"]'),
     campoQuantidade: () => cy.get('[data-testid="quantity"]'),
     botaoCadastrar: () => cy.get('[data-testid="cadastarProdutos"]'),
-    // Confirmado via inspeção real do DOM: <div class="alert alert-secondary
-    // alert-dismissible" role="alert"><span>texto</span></div>
     mensagemAlerta: () => cy.get('.alert[role="alert"]'),
   };
 

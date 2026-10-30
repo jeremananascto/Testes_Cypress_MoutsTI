@@ -11,7 +11,7 @@ module.exports = defineConfig({
   screenshotOnRunFailure: true,
 
   e2e: {
-    // Sobrescrevíveis via CYPRESS_BASE_URL / CYPRESS_apiUrl (ver .env.example)
+    
     baseUrl: "https://front.serverest.dev",
     specPattern: "cypress/e2e/**/*.cy.js",
     supportFile: "cypress/support/e2e.js",
